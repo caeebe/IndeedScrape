@@ -1,0 +1,23 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#map {
+  width: window.innerWidth;
+  height: 600px;
+}
+
+/*#barChart{
+    width: 2 * window.innerWidth/3;
+    height: window.innerWidth/3;
+}
+#pieChart{
+    width: window.innerWidth/3;
+    height: window.innerWidth/3;
+}*/
+
+body,
+html {
+  height: 100%;
+}

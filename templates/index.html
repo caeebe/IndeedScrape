@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Job Postings</title>
+
+      <!-- Leaflet sources -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+      
+      <!-- D3 Source -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+
+      
+      <!-- Bootstrap Source -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+      <!-- Beautiful Icons sources -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="./static/css/leaflet-beautify-marker-icon.css">
+      <script src="./static/js/leaflet-beautify-marker-icon.js"></script>
+      
+      <!-- Marker Cluster JS & CSS -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+      <!-- Plotly -->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      
+      <!-- Chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      
+      <!-- style -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h1>Job Market Analysis</h1>
+            <p>Use the interactive charts below to explore recent job postings</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="map"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Job Postings by City</h2>
+<!--                <div id="bar"></div>-->
+<!--                <canvas id="barChart" width="300" height="100"></canvas>-->
+                <canvas id="barChart"></canvas>
+
+            </div>
+            <div class="col-md-4">
+                <h2>Job Titles by City</h2>
+                <select id="selDataset" onchange="optionChanged(this.value)">
+                <!--    <option value="dataset1">United States</option>
+                    <option value="dataset2">UK</option>
+                    <option value="dataset3">Canada</option>-->
+                </select>
+<!--                <div id="pie"></div>-->
+                <canvas id="pieChart" width="300" height="300"></canvas>
+            </div>
+         </div>
+        <div class="row">
+            <div class="col-md-12" id="footer"></div>
+            Compiled by Aarti, Clara, Sandra
+        </div>
+        <!-- API key -->
+        <script type="text/javascript" src="static/js/config.js"></script>
+
+        <!-- JS -->
+        <script type="text/javascript" src="static/js/mapped_markers.js"></script>
+
+
+  </body>
+
+</html>
