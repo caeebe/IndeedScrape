@@ -18,7 +18,7 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
-rds_connection_string = "root:4edPlanet!@localhost/bayareajobs"
+rds_connection_string = "root:PASSWORD@localhost/bayareajobs"
 
 
 engine = create_engine(f'mysql://{rds_connection_string}?charset=utf8')
